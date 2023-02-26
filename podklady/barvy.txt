@@ -1,0 +1,8 @@
+Zde jsou vypsané barvy, použité v projektu.
+Samozřejmě si můžeš zvolit libovolné barvy zcela podle sebe.
+
+#282425 - barva textu, aktivních odkazů, pozadí menu a patičky
+#756158 - barva nadpisů, odkazů a pozadí aktivního menu
+#9c8175 - linka nad menu
+#fff1e6 - pozadí 1 sekcí O mně a Turistický průvodce
+#f9e3d0 - pozadí 2 sekcí Fotogalerie a Kontakt
