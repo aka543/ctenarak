@@ -9,10 +9,12 @@ body {
     font-family: 'Tilt Neon', cursive;
 
 }
+a.gmail {
+    color: aqua;
+}
 
 a.odkaz {
     color: yellow;
-    background-color: rgb(202, 202, 23);
     font-family: 'Tilt Neon', cursive;
 }
 
@@ -22,3 +24,11 @@ table.nabidka {
 }
 
 
+div.tabulka {
+    background-color: rgb(126, 193, 25);
+}
+
+img.reklama {
+    weight:360px;
+    width: 360px;
+}
