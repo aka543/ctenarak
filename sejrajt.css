@@ -8,6 +8,7 @@ body {
     background-color: yellowgreen;
     font-family: 'Tilt Neon', cursive;
     margin: 10px;
+    font-size: 40px;
     
 
 }
@@ -36,16 +37,21 @@ div.tabulka {
 img.reklama {
     width:30%;
     border: 3px solid rgb(2, 3, 10);
-    margin:10px;
+    margin:0px;
+    float: left;
+    overflow: auto;
 
 }
 
 img.ikona {
     width:14%;
-    border: 4px solid rgb(23, 42, 13);
+    border: 3px solid rgb(23, 42, 13);
     border-radius: 40%;
     padding: 0;
     margin: 10px;
+    float: left;
+    margin: 2%;
+    overflow: auto;
 }
 td {
     border-bottom:2px solid black;
@@ -56,11 +62,11 @@ td {
     text-align: right;
     padding-left:50px ;
 }
-section.inside {
+section.objednavka {
     background-color:rgb(126, 193, 25);
     padding:5% 15%;
 }
-section.objednavka {
+section.body {
     background-color: yellowgreen;
     padding:5% 15%;
     margin-bottom: 5px;
@@ -68,4 +74,20 @@ section.objednavka {
 
 h2.nadpis {
     margin: 5px;
+}
+
+header.hlavicka {
+    background-image: url(obrazky/mysky_po_spolu.jpeg);
+    font-size: 200px;
+    color: yellow;
+    text-align: center;
+    margin: 0;
+    padding: 150px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-shadow: 0  6px 10px rgba(0, 0, 0, 0.7);
+    
+
 }
