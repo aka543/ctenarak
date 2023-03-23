@@ -91,3 +91,30 @@ header.hlavicka {
     
 
 }
+.menu li{
+    display: inline-block;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:rgb(47, 172, 147);
+}
+
+.menu a{
+    color: rgb(102, 169, 213);
+    text-decoration: none;
+    padding: 20px 30px;
+    display: inline-block;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: rgb(50, 216, 183);
+
+}
+
+.menu a:active {
+    background-color: rgb(57, 237, 201);
+}

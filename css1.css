@@ -73,3 +73,9 @@ img.thumbnail {
     width: 15%;
 }
 
+div.odkaz a:hover {
+    background-color: rgb(178, 235, 64);
+
+}
+    
+
