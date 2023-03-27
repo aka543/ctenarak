@@ -154,3 +154,7 @@ div.popis:hover {
     background-color: rgb(201, 251, 74);
 
 }
+
+img.thumbup {
+    margin: 20px;
+}
