@@ -118,3 +118,39 @@ header.hlavicka {
 .menu a:active {
     background-color: rgb(57, 237, 201);
 }
+a.syr {
+    flex:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 230px;
+    background-color: rgb(213, 213, 29);
+
+    border:2px solid black;
+    border-radius: 0;
+    box-shadow: 7px 7px rgb(207, 243, 8);
+    margin: 15px;
+    padding: 10px;
+    
+}
+a.syr:hover {
+    background-color: rgb(201, 251, 74);
+
+
+}
+
+
+div.syry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.popis {
+    color: rgb(103, 132, 211);
+}
+div.popis:hover {
+    background-color: rgb(201, 251, 74);
+
+}

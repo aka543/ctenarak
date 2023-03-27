@@ -17,7 +17,7 @@ body {
     background-color:rgb(156, 218, 56);
     font-size: 20px;
     font-family: "Tilt Neon",Arial, Helvetica, sans-serif;
-    padding: 15%;
+    padding: 10px;
    
     
 }
@@ -42,6 +42,8 @@ p.popis {
 }
 p.metadata {
     line-height: 25px;
+    margin: 0px;
+    
 }
 
 h1.nadpis {
@@ -55,27 +57,49 @@ a.odbocka {
 
 div.informace {
     background-color: rgb(127, 198, 20);
+    padding: 10px;
 }
 
 img {
     width:12%;
-    border-radius: 0px 30px 30px 30px;
+    /* border-radius: 0px 30px 30px 30px; */
     border:2px solid rgb(7, 52, 9)
 }
-img.thumbnail {
-    width:15%;
-}
-div.odkaz {
-    border:2px solid black;
-}
+
 
 img.thumbnail {
-    width: 15%;
+    width: auto;
+    border: none;
 }
 
-div.odkaz a:hover {
-    background-color: rgb(178, 235, 64);
-
-}
+a.knizka:hover {
+    background-color: rgb(199, 248, 101);
     
+}
+
+a.knizka {
+    flex: none;
+    width: 170px;
+    border:2px solid black;
+    border-radius: 10px;
+    box-shadow: 7px 7px gray;
+    margin: 15px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+div.knizky {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+div.popis {
+    margin-top: 10px;
+}
 
