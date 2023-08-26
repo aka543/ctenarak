@@ -1,0 +1,72 @@
+
+body {
+    background-color: rgb(0, 0, 255);
+    /* background-repeat: no-repeat;
+    background-image: url('images/popcat.jpg'); */
+    font-size: large;
+    text-align:center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* .obdelnik {
+    background-color: white;
+    height: 200px;
+    width: 140px;
+    margin: 20px;
+
+}
+
+.ctverec {
+    background-color: black;
+    height: 100px;
+    width:100px;
+    margin: 20px;
+    
+} */
+
+#number {
+    font-size:75px;
+    margin:10px;
+}
+h1 {
+    font-size: 100px;
+    margin:10px;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Tilt Neon', cursive;
+}
+#clicker-container {
+    display: flex;
+    justify-content: center;
+}
+#clicker {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(9, 72, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+
+}
+#clicker:hover {
+    width: 250px;
+    height: 250px;
+}
+#kulato {
+    font-size: 50px;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Tilt Neon', cursive;
+    color:white;
+}
+#border {
+    background-color: rgb(7, 7, 58);
+    width: 300px;
+}
+#b1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
