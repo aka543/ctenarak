@@ -67,47 +67,6 @@ function obarviZpatky (tvar) {
 
 }
 
-function kalkulate() {
-  const cislo1 = prompt('zadejte prvni ze dvou cisel:');
-  const cislo2 = prompt('zadejte druhe ze dvou cisel:');
-  const postup = prompt('zadejte co s temito cisly budeme delat[*/-+]:');
-let vysledek = 0;
-switch(postup){
-  case '*':
-    vysledek = cislo1 * cislo2;
-    break;
-  case '/':
-    vysledek = cislo1 / cislo2;
-    break;
-  case '-':
-    vysledek = cislo1 - cislo2;
-    break;
-  case '+':
-    vysledek = cislo1 + cislo2;
-    break;
-}
-alert(vysledek);
-  // if (postup === '*') {
-  //   const vysledek = cislo1 * cislo2;
-  //   alert(vysledek);
-  // }
-
-  // if (postup === '/') {
-  //   const vysledek = cislo1 / cislo2;
-  //   alert(vysledek);
-  // }
-
-  // if (postup === '+') {
-  //   const vysledek = cislo1 + cislo2;
-  //   alert(vysledek);
-  // }
-
-  // if (postup === '-') {
-  //   const vysledek = cislo1 - cislo2;
-  //   alert(vysledek);
-  // }
-}
-
 function spawnBurger() {
   const burgers = document.getElementById('burgers');
   burgers.innerHTML = '<img src="images/fish.webp" alt="burger" id="b1"></img>';
@@ -153,7 +112,7 @@ function setCounter(num) {
   document.getElementById('number').innerHTML = String(num);
 }
 
-foto.addEventListener('mousedown', (e) => {
+function mousedownHandler(e) {
   if (e.button === 1) {
     spawnBurger();
   }
@@ -161,41 +120,48 @@ foto.addEventListener('mousedown', (e) => {
   if (e.button !== 0) {
     return;
   }
-  console.log(e);
+  console.log('down ', e);
   foto.src = 'images/openPopcat.webp';
   clicks += 1;
   setCounter(clicks);
   play('sounds/pop.wav');
-});
-
-foto.addEventListener('mouseup', () => {
-  foto.src = 'images/popcat.jpg';
-});
-
-const ctvrtKruh = {
-  name: 'ctvrtKruh',
-  r: 1,
-}
-
-const kostka = {
-  name: 'kostka',
-  a: 1,
-  jakyMaKostkaObsah() {
-    const obsah = this.a * this.a;
-    return obsah;
-  },
 };
 
-let pocetTref = 0;
-const n = 1000000;
-for (let j = 0; j < n; j += 1) {
-  const x = Math.random();
-  const y = Math.random();
-  const c = y * y + x * x;
-  if (c <= 1) {
-    pocetTref += 1;
-  }
+function mouseupHandler(e) {
+  console.log('up ', e);
+  foto.src = 'images/popcat.jpg';
 }
 
-const pi = 4 * (pocetTref / n);
-console.log(pi);
+foto.addEventListener('mousedown',mousedownHandler);
+foto.addEventListener('touchstart',mousedownHandler);
+
+foto.addEventListener('mouseup',mouseupHandler);
+foto.addEventListener('touchend',mouseupHandler);
+
+// const ctvrtKruh = {
+//   name: 'ctvrtKruh',
+//   r: 1,
+// }
+
+// const kostka = {
+//   name: 'kostka',
+//   a: 1,
+//   jakyMaKostkaObsah() {
+//     const obsah = this.a * this.a;
+//     return obsah;
+//   },
+// };
+
+// let pocetTref = 0;
+// const n = 1000000;
+// for (let j = 0; j < n; j += 1) {
+//   const x = Math.random();
+//   const y = Math.random();
+//   const c = y * y + x * x;
+//   if (c <= 1) {
+//     pocetTref += 1;
+//   }
+// }
+
+// const pi = 4 * (pocetTref / n);
+// console.log(pi);
