@@ -124,7 +124,7 @@ function mousedownHandler(e) {
   foto.src = 'images/openPopcat.webp';
   clicks += 1;
   setCounter(clicks);
-  play('sounds/pop.wav');
+  play('sounds/pop.2.0.mp3');
 };
 
 function mouseupHandler(e) {
@@ -133,10 +133,10 @@ function mouseupHandler(e) {
 }
 
 foto.addEventListener('mousedown',mousedownHandler);
-foto.addEventListener('touchstart',mousedownHandler);
+// foto.addEventListener('touchstart',mousedownHandler);
 
 foto.addEventListener('mouseup',mouseupHandler);
-foto.addEventListener('touchend',mouseupHandler);
+// foto.addEventListener('touchend',mouseupHandler);
 
 // const ctvrtKruh = {
 //   name: 'ctvrtKruh',
