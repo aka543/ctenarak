@@ -1,0 +1,152 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgb(162, 11, 162);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 5rem;
+	font-weight: 600;
+}
+#d1 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	border-radius: 20px 0px 0px 20px;
+	background-color: white;
+	width: 650px;
+	height: 650px;
+}
+#d2 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	border-radius: 0px 20px 20px 0px;
+	background-color: rgb(203, 194, 194);
+	width: 650px;
+	height: 650px;
+}
+
+#btn-new-game {
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.playericon {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	color: black;
+	font-size: 50px;
+	margin-top: 20px;
+}
+
+.player-boards {
+	display: flex;
+	flex-direction: row;
+}
+
+#scoreD1,#scoreD0 {
+	margin-top: 50px;
+	font-size: 100px;
+}
+#body2 {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	color: black;
+}
+#totalD1, #totalD0 {
+	width: 100px;
+	height: 70px;
+	background-color: rgb(175, 112, 123);
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 40px;
+	border:1px solid black;
+}
+/* #new-game {
+	margin-top: -600px;
+	z-index: 0;
+	font-size: 30px;
+} */
+/* #novakostka {
+	margin-top: -100px;
+	font-size: 20px;
+}
+#surrender {
+	margin-top: -80px;
+	font-size: 20px;
+} */
+/* #kostka {
+	margin-top: -250px;
+	font-size: 20px;
+} */
+#long {
+	width: 1300px;
+	display: flex;
+	justify-content: center;
+	position: sticky;
+	top: 10px;
+	z-index: 1;
+}
+#top_menu {
+	background-color: rgb(100, 100, 126);
+	color: rgb(0, 0, 0);
+	height: 50px;
+	width: 1300px;
+	padding-top: 10px;
+	font-size: 25px;
+	font-weight: 1000;
+	z-index: 1;
+
+}
+#buttons {
+	position: relative;
+	bottom:100px;
+	z-index: 0;
+}
+#new-game {
+	position:relative;
+	bottom:500px;
+	font-size: 50px;
+	z-index: 0;
+}
+#kostka {
+	position: relative;
+	bottom:320px;
+	font-size: 50px;
+}
+#novakostka, #surrender {
+	position: relative;
+	bottom: 175px;
+	font-size: 25px;
+}
+#novakostka {
+	margin-bottom: 25px;
+	font-size: 25px;
+}
+#pointsTxtD1,#pointsTxtD0 {
+	position: relative;
+	top: 75px;
+	font-size: 15px;
+}
+#new {
+	position: absolute;
+	border-radius: 20px;
+	font-size: 50px;
+	height: 75px;
+	top: 45px;
+	z-index: 1;
+	
+}
