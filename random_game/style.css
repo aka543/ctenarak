@@ -145,8 +145,32 @@ h1 {
 	position: absolute;
 	border-radius: 20px;
 	font-size: 50px;
-	height: 75px;
-	top: 45px;
+	height: 140px;
+	top: 250px;
 	z-index: 1;
+	font-size: 100px;
+	background-color: rgb(125, 125, 125);
+	border-radius: 30px;
+	border: solid black 5px;
 	
+}
+#new:hover {
+	background-color: rgb(73, 72, 72);
+	color: rgb(48, 43, 43);
+	border: none;
+}
+#pravidla {
+	position: absolute;
+	font-size: 40px;
+	width: 50%;
+	height: 550px;
+	top: 400px;
+	border:solid black 5px;
+}
+#winner {
+	position: absolute;
+	font-size: 80px;
+	top: 100px;
+	font-weight: 700;
+	background-color: rgb(80, 82, 70);
 }
