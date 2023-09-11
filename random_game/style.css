@@ -14,7 +14,7 @@ h1 {
 	margin-top: 5rem;
 	font-weight: 600;
 }
-#d1 {
+#playerboardP1 {
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -23,7 +23,7 @@ h1 {
 	width: 650px;
 	height: 650px;
 }
-#d2 {
+#playerboardP2 {
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -33,7 +33,7 @@ h1 {
 	height: 650px;
 }
 
-#btn-new-game {
+#btnResetGame {
 	width: 100%;
 	flex-wrap: wrap;
 }
@@ -48,12 +48,12 @@ h1 {
 	margin-top: 20px;
 }
 
-.player-boards {
+.playerBoards {
 	display: flex;
 	flex-direction: row;
 }
 
-#scoreD1,#scoreD0 {
+#scoreP1,#scoreP0 {
 	margin-top: 50px;
 	font-size: 100px;
 }
@@ -64,7 +64,7 @@ h1 {
 	text-align: center;
 	color: black;
 }
-#totalD1, #totalD0 {
+#totalP1, #totalP0 {
 	width: 100px;
 	height: 70px;
 	background-color: rgb(175, 112, 123);
@@ -92,7 +92,7 @@ h1 {
 	margin-top: -250px;
 	font-size: 20px;
 } */
-#long {
+#menuOnTop {
 	width: 1300px;
 	display: flex;
 	justify-content: center;
@@ -100,7 +100,7 @@ h1 {
 	top: 10px;
 	z-index: 1;
 }
-#top_menu {
+#topMenu {
 	background-color: rgb(100, 100, 126);
 	color: rgb(0, 0, 0);
 	height: 50px;
@@ -116,7 +116,7 @@ h1 {
 	bottom:100px;
 	z-index: 0;
 }
-#new-game {
+#resetGame {
 	position:relative;
 	bottom:500px;
 	font-size: 50px;
@@ -136,7 +136,7 @@ h1 {
 	margin-bottom: 25px;
 	font-size: 25px;
 }
-#pointsTxtD1,#pointsTxtD0 {
+#pointsTxtP1,#pointsTxtP0 {
 	position: relative;
 	top: 75px;
 	font-size: 15px;
@@ -173,4 +173,7 @@ h1 {
 	top: 100px;
 	font-weight: 700;
 	background-color: rgb(80, 82, 70);
+}
+.button {
+	cursor: pointer;
 }

@@ -16,33 +16,40 @@ if (koncoveBody === null) {
 }
 // ------
 // UI
-const boards = document.getElementById('player-boards');
+const boards = document.getElementById('playerBoards');
 boards.style.display = 'none';
 const newGame = document.getElementById('new');
-const reset = document.getElementById('new-game');
+const reset = document.getElementById('resetGame');
 const pravidla = document.getElementById('pravidla');
 const winner = document.getElementById('winner');
 
+const sounds = {
+  playerSwitch: '../sounds/playerSwitch.mp3',
+  gameEnter: '../sounds/button.mp3',
+  resetGame: '../sounds/click.mp3',
+};
+
 function play(sound) {
-  const audio = new Audio(sound);
+  const path = sounds[sound];
+  const audio = new Audio(path);
   audio.loop = false;
   audio.play();
 }
 
 function updateHtmlUI() {
   const k = document.querySelector('.kostka');
-  const scoreD1 = document.getElementById('scoreD1');
-  const totalD1 = document.getElementById('totalD1');
-  const scoreD0 = document.getElementById('scoreD0');
-  const totalD0 = document.getElementById('totalD0');
+  const scoreP1 = document.getElementById('scoreP1');
+  const totalP1 = document.getElementById('totalP1');
+  const scoreP0 = document.getElementById('scoreP0');
+  const totalP0 = document.getElementById('totalP0');
 
-  document.querySelector(`#scoreD${aktivniHrac}`).innerHTML = kostka;
+  document.querySelector(`#scoreP${aktivniHrac}`).innerHTML = kostka;
   if (aktivniHrac === 0) {
-    scoreD0.textContent = bodyVKole;
-    scoreD1.textContent = 0;
+    scoreP0.textContent = bodyVKole;
+    scoreP1.textContent = 0;
   } else {
-    scoreD1.textContent = bodyVKole;
-    scoreD0.textContent = 0;
+    scoreP1.textContent = bodyVKole;
+    scoreP0.textContent = 0;
   }
 
   if (visibleKostka === true) {
@@ -52,15 +59,15 @@ function updateHtmlUI() {
   }
 
   k.textContent = kostka;
-  totalD1.textContent = body[1] + '/' + koncoveBody;
-  totalD0.textContent = body[0] + '/' + koncoveBody;
+  totalP1.textContent = body[1] + '/' + koncoveBody;
+  totalP0.textContent = body[0] + '/' + koncoveBody;
 
   if (aktivniHrac === 0) {
-    document.getElementById('d1').style.backgroundColor = 'white';
-    document.getElementById('d2').style.backgroundColor = 'rgb(203, 194, 194)';
+    document.getElementById('playerboardP1').style.backgroundColor = 'white';
+    document.getElementById('playerboardP2').style.backgroundColor = 'rgb(203, 194, 194)';
   } else {
-    document.getElementById('d2').style.backgroundColor = 'white';
-    document.getElementById('d1').style.backgroundColor = 'rgb(203, 194, 194)';
+    document.getElementById('playerboardP2').style.backgroundColor = 'white';
+    document.getElementById('playerboardP1').style.backgroundColor = 'rgb(203, 194, 194)';
   }
 }
 //-----
@@ -73,7 +80,7 @@ newCube.addEventListener('click', () => {
   kostka = Math.floor(Math.random() * 6) + 1;
   if (kostka === 1) {
     aktivniHrac = (aktivniHrac === 0) ? 1 : 0;
-    play('../sounds/playerSwitch.mp3');
+    play('playerSwitch');
     bodyVKole = 0;
   } else {
     bodyVKole += kostka;
@@ -87,7 +94,7 @@ surrender.addEventListener('click', () => {
   body[aktivniHrac] += bodyVKole;
   bodyVKole = 0;
   visibleKostka = false;
-  play('../sounds/playerSwitch.mp3');
+  play('playerSwitch');
   if (body[aktivniHrac] >= koncoveBody) {
     boards.style.display = 'none';
     pravidla.style.display = 'block';
@@ -95,21 +102,12 @@ surrender.addEventListener('click', () => {
     winner.style.display = 'block';
     if (aktivniHrac === 0) {
       winner.textContent = 'Player2 is winner';
-    }
-    else {
+    } else {
       winner.textContent = 'Player1 is winner';
     }
   }
 
-  if (aktivniHrac === 0) {
-    aktivniHrac = 1;
-    document.getElementById('d1').style.backgroundColor = 'rgb(203, 194, 194)';
-    document.getElementById('d2').style.backgroundColor = 'white';
-  } else {
-    aktivniHrac = 0;
-    document.getElementById('d2').style.backgroundColor = 'rgb(203, 194, 194)';
-    document.getElementById('d1').style.backgroundColor = 'white';
-  }
+  aktivniHrac = (aktivniHrac === 0) ? 1 : 0;
   updateHtmlUI();
 });
 
@@ -118,7 +116,7 @@ newGame.addEventListener('click', () => {
   newGame.style.display = 'none';
   pravidla.style.display = 'none';
   winner.style.display = 'none';
-  play('../sounds/click.mp3');
+  play('gameEnter');
 });
 
 reset.addEventListener('click', () => {
@@ -128,5 +126,5 @@ reset.addEventListener('click', () => {
   aktivniHrac = 0;
   visibleKostka = false;
   updateHtmlUI();
-  play('../sounds/button.mp3');
+  play('resetGame');
 });
