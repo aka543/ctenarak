@@ -182,11 +182,12 @@ h1 {
 #pravidla {
 	position: absolute;
 	font-size: 40px;
-	width: 50%;
-	height: 550px;
+	width: 800px;
+	height: 530px;
 	top: 400px;
 	border:solid black 5px;
 	background-color: rgb(27, 31, 71);
+	padding: 10px;
 }
 #winner {
 	position: absolute;
@@ -197,4 +198,116 @@ h1 {
 }
 .button {
 	cursor: pointer;
+}
+#menuTop {
+	width: 200px;
+	position: relative;
+	left: 600px;
+}
+@media only screen and (max-width: 1300px) {
+	#surrender{
+	  	left: 285px;
+		bottom: 160px;
+		height: 50px;
+		font-size: 30px;
+		width: 220px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#kostka{
+	  	left: 0px;
+		bottom: 200px;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	#novakostka{
+	  	left: 270px;
+		bottom: 150px;
+		height: 50px;
+		font-size: 30px;
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	#resetGame{
+	  	left: 270px;
+		bottom: 290px;
+		height: 50px;
+		width: 250px;
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-height: 600px) {
+	#body2 {
+ 		width: 800px;
+		height: 400px;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	#scoreP0, #scoreP1{
+		font-size: 50px;
+		position: relative;
+		top: 50px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#pointsTxtP0, #pointsTxtP1{
+		bottom: 40px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#topMenu{
+		display: none;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#menuOnTop{
+		display: none;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#new{
+		font-size: 40px;
+		height: 70px;
+		width: 400px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#pravidla{
+		width: 800px;
+		height: 200px;
+		font-size: 20px;
+		margin-bottom: 50px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#menuOnTop{
+		display: none;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#menuTop{
+		display: none;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#playerTxtP1{
+		position: relative;
+		top: 100px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#playerTxtP2{
+		position: relative;
+		top: 100px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#pointsTxtP1, #pointsTxtP0{
+		display: none;
+	}
 }

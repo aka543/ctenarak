@@ -26,9 +26,12 @@ if (koncoveBody === null) {
 //   body: 0,
 //   bodyVKole,
 // };
-
+const surrender = document.getElementById('surrender');
+const newCube = document.getElementById('novakostka');
 const boards = document.getElementById('playerBoards');
 boards.style.display = 'none';
+surrender.style.display = 'none';
+newCube.style.display = 'none';
 const newGame = document.getElementById('new');
 const reset = document.getElementById('resetGame');
 const pravidla = document.getElementById('pravidla');
@@ -38,6 +41,7 @@ const sounds = {
   playerSwitch: '../sounds/playerSwitch.mp3',
   gameEnter: '../sounds/button.mp3',
   resetGame: '../sounds/click.mp3',
+  diceTrow: '../sounds/diceRoll.mp3',
 };
 
 function play(sound) {
@@ -85,10 +89,11 @@ function updateHtmlUI() {
 
 updateHtmlUI();
 
-const newCube = document.getElementById('novakostka');
+
 
 newCube.addEventListener('click', () => {
   kostka = Math.floor(Math.random() * 6) + 1;
+  play('diceTrow');
   if (kostka === 1) {
     aktivniHrac = (aktivniHrac === 0) ? 1 : 0;
     play('playerSwitch');
@@ -99,7 +104,7 @@ newCube.addEventListener('click', () => {
   }
   updateHtmlUI();
 });
-const surrender = document.getElementById('surrender');
+
 
 surrender.addEventListener('click', () => {
   body[aktivniHrac] += bodyVKole;
@@ -127,6 +132,8 @@ newGame.addEventListener('click', () => {
   newGame.style.display = 'none';
   pravidla.style.display = 'none';
   winner.style.display = 'none';
+  surrender.style.display = 'block';
+  newCube.style.display = 'block';
   body = [0, 0];
   bodyVKole = 0;
   aktivniHrac = 0;
@@ -145,3 +152,21 @@ reset.addEventListener('click', () => {
   updateHtmlUI();
   play('resetGame');
 });
+
+// soundManage.addEventListener('click' () => {
+//   if (soundOff = false) {
+//     sounds. playerSwitch = null;
+//     sounds.gameEnter = null;
+//     sounds.resetGame = null;
+//     sounds.diceTrow = null;
+//     soundOff = true;
+//     soundManage.textContent = '&#xf1f6;';
+//   } else {
+//     sounds.playerSwitch =  '../sounds/playerSwitch.mp3',
+//     sounds.gameEnter =  '../sounds/button.mp3',
+//     sounds.resetGame =  '../sounds/click.mp3',
+//     sounds.diceTrow =  '../sounds/diceRoll.mp3',
+//     soundOff = false;
+//     soundManage.textContent = '&#xf0f3;';
+//   }
+// });
