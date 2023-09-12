@@ -120,8 +120,8 @@ crusoe {
     flex-direction: column;
     justify-content: space-between;
     height: auto;
-    width: 420px;
-    height: 530px;
+    width: 400px;
+    height: 40%;
     border: solid black 5px;
     background-color: rgb(146, 78, 78);
     margin-top: 50px;

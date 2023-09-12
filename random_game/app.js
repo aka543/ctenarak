@@ -15,7 +15,18 @@ if (koncoveBody === null) {
   koncoveBody = 40;
 }
 // ------
+
 // UI
+
+// const player1 = {
+//   body: 0,
+//   bodyVKole: 0,
+// };
+// const player2 = {
+//   body: 0,
+//   bodyVKole,
+// };
+
 const boards = document.getElementById('playerBoards');
 boards.style.display = 'none';
 const newGame = document.getElementById('new');
@@ -116,7 +127,13 @@ newGame.addEventListener('click', () => {
   newGame.style.display = 'none';
   pravidla.style.display = 'none';
   winner.style.display = 'none';
+  body = [0, 0];
+  bodyVKole = 0;
+  aktivniHrac = 0;
+  visibleKostka = false;
+  kostka = Math.floor(Math.random() * 6) + 1;
   play('gameEnter');
+  updateHtmlUI();
 });
 
 reset.addEventListener('click', () => {
