@@ -1,5 +1,9 @@
-html { box-sizing: border-box; }
-*, ::before, ::after { box-sizing: inherit; } ***
+/* html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; } */
+html,
+body {
+	height: 100%;
+}
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -7,6 +11,9 @@ body {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	margin: auto;
+	width: 100%;
+	flex-direction: column;
 }
 
 h1 {
@@ -14,59 +21,59 @@ h1 {
 	margin-top: 5rem;
 	font-weight: 600;
 }
-#playerboardP1 {
+
+.playerboard {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	border-radius: 20px 0px 0px 20px;
-	background-color: white;
-	/* width: 650px; */
-	height: 650px;
-}
-#playerboardP2 {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	border-radius: 0px 20px 20px 0px;
-	background-color: rgb(203, 194, 194);
-	/* width: 650px; */
-	height: 650px;
+	width: 50%;
+	height: 100%;
 }
 
-#btnResetGame {
-	width: 100%;
-	flex-wrap: wrap;
+#playerboardP1 {
+	border-radius: 20px 0px 0px 20px;
+	background-color: white;
+}
+
+#playerboardP2 {
+	background-color: rgb(203, 194, 194);
+	border-radius: 0px 20px 20px 0px;
 }
 
 .playericon {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: start;
 	align-items: center;
 	color: black;
-	font-size: 50px;
-	margin-top: 20px;
+	font-size: 30px;
+	width: 100%;
 }
 
 .playerBoards {
 	display: flex;
 	flex-direction: row;
-	height: 100%;
+	flex-grow: 10;
 }
 
-#scoreP1,#scoreP0 {
+#scoreP1,
+#scoreP0 {
 	margin-top: 50px;
-	font-size: 100px;
+	font-size: 50px;
 }
+
 #body2 {
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 	flex-direction: column;
 	text-align: center;
 	color: black;
+	width: 100%;
 	height: 100%;
 }
-#totalP1, #totalP0 {
+
+#totalP1,
+#totalP0 {
 	width: 100px;
 	height: 70px;
 	background-color: rgb(175, 112, 123);
@@ -75,122 +82,89 @@ h1 {
 	justify-content: center;
 	text-align: center;
 	font-size: 40px;
-	border:1px solid black;
+	border: 1px solid black;
 }
-/* #new-game {
-	margin-top: -600px;
-	z-index: 0;
-	font-size: 30px;
-} */
-/* #novakostka {
-	margin-top: -100px;
-	font-size: 20px;
-}
-#surrender {
-	margin-top: -80px;
-	font-size: 20px;
-} */
-/* #kostka {
-	margin-top: -250px;
-	font-size: 20px;
-} */
-#menuOnTop {
-	width: 1300px;
-	display: flex;
-	justify-content: center;
-	position: sticky;
-	top: 10px;
-	z-index: 1;
-}
+
 #topMenu {
+	position: sticky;
 	background-color: rgb(100, 100, 126);
 	color: rgb(0, 0, 0);
 	height: 50px;
-	width: 1300px;
+	width: 100%;
 	padding-top: 10px;
 	font-size: 25px;
 	font-weight: 1000;
 	z-index: 1;
+}
 
-}
 #buttons {
-	position: relative;
-	bottom:100px;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	bottom: 10px;
+	width: 100%;
 	z-index: 0;
 }
-#resetGame {
-	position:relative;
-	bottom:500px;
-	left:450px;
-	font-size: 50px;
-	z-index: 0;
-	width:400px;
+
+.button {
+	cursor: pointer;
+	position: relative;
+	font-size: 30px;
 	background-color: rgb(102, 102, 102);
 	border-radius: 10px;
 	border: solid rgb(73, 70, 70) 2px;
+	margin-top: 20px;
+
+	width: 180px;
+	left: calc(50% - 90px);
+	font-size: 20px;
 }
-#resetGame:hover {
+
+.button:hover {
 	background-color: rgb(182, 170, 170);
 	border: none;
 }
+
 #kostka {
-	position: relative;
-	bottom:320px;
 	font-size: 30px;
 }
-#novakostka, #surrender {
+
+#pointsTxtP1,
+#pointsTxtP0 {
 	position: relative;
-	bottom: 175px;
-	left:560px;
-	font-size: 30px;
-	width:200px;
-	background-color: rgb(102, 102, 102);
-	border-radius: 10px;
-	border:solid rgb(73, 70, 70) 2px;
-}
-#novakostka:hover, #surrender:hover {
-	background-color: rgb(182, 170, 170);
-	border: none;
-}
-#novakostka {
-	margin-bottom: 25px;
-	font-size: 30px;
-	width:250px;
-	left:535px;
-}
-#pointsTxtP1,#pointsTxtP0 {
-	position: relative;
-	top: 75px;
+	top: 70px;
 	font-size: 15px;
 }
+
 #new {
 	position: absolute;
 	border-radius: 20px;
-	font-size: 50px;
-	height: 140px;
+	height: 80px;
 	top: 250px;
 	z-index: 1;
-	font-size: 100px;
+	font-size: 50px;
 	background-color: rgb(125, 125, 125);
 	border-radius: 30px;
 	border: solid black 5px;
-	
 }
+
 #new:hover {
 	background-color: rgb(73, 72, 72);
 	color: rgb(48, 43, 43);
 	border: none;
 }
+
 #pravidla {
 	position: absolute;
 	font-size: 40px;
-	width: 800px;
+	width: 100%;
 	height: 530px;
 	top: 400px;
-	border:solid black 5px;
+	border: solid black 5px;
 	background-color: rgb(27, 31, 71);
 	padding: 10px;
 }
+
 #winner {
 	position: absolute;
 	font-size: 80px;
@@ -198,11 +172,8 @@ h1 {
 	font-weight: 700;
 	background-color: rgb(80, 82, 70);
 }
-.button {
-	cursor: pointer;
-}
-#menuTop {
-	width: 200px;
+
+.player-name {
 	position: relative;
-	left: 600px;
+	top: 5%;
 }
