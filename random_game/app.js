@@ -1,7 +1,5 @@
 /* eslint-disable prefer-destructuring */
 
-
-
 // Datovy model
 let body = [0, 0];
 let bodyVKole = 0;
@@ -9,7 +7,6 @@ let aktivniHrac = 0;
 let koncoveBody = prompt('kolik bude maximum bodů:');
 let kostka = Math.floor(Math.random() * 6) + 1;
 let visibleKostka = false;
-
 
 if (koncoveBody === null) {
   koncoveBody = 40;
@@ -29,11 +26,13 @@ if (koncoveBody === null) {
 const surrender = document.getElementById('surrender');
 const newCube = document.getElementById('novakostka');
 const boards = document.getElementById('playerBoards');
+const reset = document.getElementById('resetGame');
 boards.style.display = 'none';
 surrender.style.display = 'none';
 newCube.style.display = 'none';
+reset.style.display = 'none';
 const newGame = document.getElementById('new');
-const reset = document.getElementById('resetGame');
+
 const pravidla = document.getElementById('pravidla');
 const winner = document.getElementById('winner');
 
@@ -113,6 +112,9 @@ surrender.addEventListener('click', () => {
   play('playerSwitch');
   if (body[aktivniHrac] >= koncoveBody) {
     boards.style.display = 'none';
+    surrender.style.display = 'none';
+    newCube.style.display = 'none';
+    resetGame.style.display = 'none';
     pravidla.style.display = 'block';
     newGame.style.display = 'block';
     winner.style.display = 'block';
@@ -134,6 +136,7 @@ newGame.addEventListener('click', () => {
   winner.style.display = 'none';
   surrender.style.display = 'block';
   newCube.style.display = 'block';
+  resetGame.style.display = 'block';
   body = [0, 0];
   bodyVKole = 0;
   aktivniHrac = 0;

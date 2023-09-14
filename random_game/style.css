@@ -167,10 +167,10 @@ h1 {
 	position: absolute;
 	border-radius: 20px;
 	font-size: 50px;
-	height: 140px;
+	height: 10%;
 	top: 250px;
 	z-index: 1;
-	font-size: 100px;
+	width: 300px;
 	background-color: rgb(125, 125, 125);
 	border-radius: 30px;
 	border: solid black 5px;
