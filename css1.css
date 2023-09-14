@@ -14,8 +14,8 @@ h1 {
 
 
 body {
-    color:rgb(46, 22, 22);
-    background-color:rgb(176, 134, 134);
+    color:rgb(52, 25, 25);
+    background-color:rgb(138, 104, 104);
     font-size: 20px;
     font-family: "Tilt Neon",Arial, Helvetica, sans-serif;
     padding: 10px;
@@ -48,8 +48,8 @@ p.metadata {
 
 h1.nadpis {
     text-align: center;
+    color: rgb(41, 10, 10);
 }
-
 a.odbocka {
     font-size: 40px;
     text-align: center;
@@ -74,8 +74,7 @@ img.thumbnail {
 }
 
 a.knizka:hover {
-    background-color: rgb(199, 248, 101);
-    
+    background-color: rgb(96, 102, 84);
 }
 
 a.knizka {
@@ -86,13 +85,20 @@ a.knizka {
     box-shadow: 7px 7px gray;
     margin: 15px;
     padding: 10px;
-
+    background-color: rgb(74, 42, 42);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: auto;
 }
 
+a {
+    color: rgb(32, 22, 87);
+    text-decoration: none;
+}
 div.knizky {
     display: flex;
     flex-wrap: wrap;
@@ -153,4 +159,16 @@ crusoe {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+a.odkaz {
+    text-decoration: none;
+    color: rgb(54, 43, 94);
+}
+a.arrow-back {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+div.informace {
+    background-color: rgb(162, 188, 165);
 }
