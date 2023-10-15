@@ -1,0 +1,110 @@
+body {
+    background: #111111;
+    color: white;
+}
+
+.border,
+.borderR {
+    border: solid 1px rgb(255, 255, 255);
+}
+
+.borderR {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+#nadpis {
+    position: sticky;
+    border: solid 1px white;
+    width: 100%;
+    background-color: #353030;
+}
+
+.skupinaCisla {
+    display: flex;
+    flex-direction: column;
+}
+#nasobekDelitel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+#nadpisNasobek,
+#nadpisRozlozeno,
+#nadpisDelitel {
+    width: 150px;
+}
+#skupinaCisla1,
+#skupinaCisla2,
+#skupinaCisla3 {
+    position: relative;
+    left: 10px;
+    width: 150px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#nasobek,
+#rozlozeno,
+#delitel {
+    width: 150px;
+}
+
+#nadpisDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#cislo {
+    position: relative;
+    left: calc(50% - 100px);
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+#imputCislo2 {
+    display: none;
+}
+#nadpisCislo2 {
+    display: none;
+}
+
+#imputCislo1,
+#imputCislo2 {
+    height: 35px;
+    width: 210px;
+    border: black 3px solid;
+    background-color: #343434;
+}
+#impuCislo1,
+#imputCislo2:hover {
+    background-color: #6a6969;
+}
+
+#nadpisCislo1,
+#nadpisCislo2 {
+    position: relative;
+    left: 80px;
+    top: 20px;
+    margin-bottom: 20px;
+}
+
+#skupinaCisla2 {
+    position: relative;
+    bottom: 30px;
+}
+#plus {
+    position: relative;
+    left: 40px;
+    top: 10px;
+    border: white 2px solid;
+    height: 30px;
+    width: 130px;
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}

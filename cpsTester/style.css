@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+}
+
+#clickedDiv {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    background-color: rgb(122, 122, 122);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: calc(50% - 40%);
+}
+#cps {
+    position: relative;
+    left: 49%;
+    margin-bottom: 2%;
+}
+#clicks {
+    position: relative;
+    left: 49%;
+    margin-bottom: 2%;
+}
